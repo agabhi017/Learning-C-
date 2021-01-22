@@ -45,5 +45,5 @@ some cases such as :
  During competitive programming, sometimes the number of test cases are very large and if cin/cout is used with default setting, the program will be
  slower as it will first wait for the output buffer to be cleared before taking the next input. In such settings, the output is not sent to the terminal
  but to a file and hence the sync of input-output does not matter as long as the output is correct. The default setting can be changed to untie cin from cout 
- so that the input/output buffers do not hinder the runtime of the program.
+ so that the input/output buffers do not hinder the runtime of the program. More on this can be referred from here : https://stackoverflow.com/questions/56909280/using-stdendl-vs-n-when-cin-and-cout-are-untied
  
