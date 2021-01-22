@@ -29,5 +29,20 @@ the expected order, that is, until the buffer is full, the output might not be v
 #### How does C++'s standard library works in the deafault case?
 
 By default the cin and cout objects are tied. This means that calling cin will flush the cout buffer first which will cause the contents to be printed 
-on the screen. Furthermore, the endl operator flushes the output stream as well to make the output visible when required. 
-This default setting 
+on the screen. Furthermore, the endl notation (also called as a manipulator) flushes the output stream as well to make the output visible when required. 
+
+
+#### How does this tying of cin-cout or the endl notation impact the runtime of programs?
+
+In smaller programs where cin/cout/endl are used only a handful of times, the impact might not be that significant. However it can become significant in 
+some cases such as : \
+ a.) Large programs with input-ouptut to files : \
+ If a program writes outputs to files then it is ideal to work with the buffer as much as possible and once the buffer is full, flush the output to the
+ file as writing to disk is costlier than writing to RAM. So it is advisable to use endline character in case of endl notation. \
+ 
+ b.) Competitive programming : \
+ During competitive programming, sometimes the number of test cases are very large and if cin/cout is used with default setting, the program will be
+ slower as it will first wait for the output buffer to be cleared before taking the next input. In such settings, the output is not sent to the terminal
+ but to a file and hence the sync of input-output does not matter as long as the output is correct. The default setting can be changed to untie cin from cout 
+ so that the input/output buffers do not hinder the runtime of the program.
+ 
