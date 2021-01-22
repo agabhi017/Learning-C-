@@ -1,3 +1,3 @@
 # Learning-C++
 
-My thoughts and understanding while learning C++
+My thoughts and understandings while learning C++
