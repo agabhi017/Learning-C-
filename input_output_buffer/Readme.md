@@ -35,7 +35,7 @@ on the screen. Furthermore, the endl notation (also called as a manipulator) flu
 #### How does this tying of cin-cout or the endl notation impact the runtime of programs?
 
 In smaller programs where cin/cout/endl are used only a handful of times, the impact might not be that significant. However it can become significant in 
-some cases such as : \
+some cases such as : 
 
  a.) Large programs with input-ouptut to files : \
  If a program writes outputs to files then it is ideal to work with the buffer as much as possible and once the buffer is full, flush the output to the
