@@ -36,9 +36,10 @@ on the screen. Furthermore, the endl notation (also called as a manipulator) flu
 
 In smaller programs where cin/cout/endl are used only a handful of times, the impact might not be that significant. However it can become significant in 
 some cases such as : \
+
  a.) Large programs with input-ouptut to files : \
  If a program writes outputs to files then it is ideal to work with the buffer as much as possible and once the buffer is full, flush the output to the
- file as writing to disk is costlier than writing to RAM. So it is advisable to use endline character in case of endl notation. \
+ file as writing to disk is costlier than writing to RAM. So it is advisable to use endline character in case of endl notation.
  
  b.) Competitive programming : \
  During competitive programming, sometimes the number of test cases are very large and if cin/cout is used with default setting, the program will be
