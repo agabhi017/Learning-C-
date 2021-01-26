@@ -1,5 +1,6 @@
 ### ___Functions___
 
+* Programs begin executing at the beginning of the function called main() (all lowercase), so you should always have a function by this name.
 * The library files contain the compiled code for the functions, whereas the header files contain the prototypes.
 * C++ library functions are stored in library files. When the compiler compiles a program, it must search the library files for the functions you’ve used. Compilers differ on which library
 files they search automatically.
@@ -11,4 +12,5 @@ batch files can be designed to run programs and test their return values, usuall
 * The normal convention is that an exit value of zero means the program ran successfully, whereas a nonzero value means there was a problem. Thus, you can design a C++
 program to return a nonzero value if, say, it fails to open a file.You can then design a shell script or batch file to run that program and to take some alternative action if the program signals failure.
 * Incidentally, main is not a keyword because it’s not part of the language. Instead, it is the name of a required function. You can use main as a variable name (but that can cause some problems apart from making the program confusing).
-* 
+* C++ provides two predefined objects (cin and cout) for handling input and output. They are examples of the istream and ostream classes, which are defined in the iostream file.
+* To use a library function, you should include the header file that provides the prototype for the function.
