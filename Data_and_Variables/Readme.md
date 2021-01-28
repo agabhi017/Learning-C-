@@ -18,5 +18,7 @@ the compiler and the resources it uses. Names beginning with a single underscore
   * An int integer is at least as big as short.
   * A long integer is at least 32 bits wide and at least as big as int.
   * A long long integer is at least 64 bits wide and at least as big as long.
-* The manipulators "hex", "ct" can change the way cout displays integers. Use cout << maipulator_type; to change the notation of the integer type
+* The manipulators "hex", "ct" can change the way cout displays integers. Use cout << maipulator_type; to change the notation of the integer type.
+* The cout.put() member function provides an alternative to using the << operator to display a character.
+
 
