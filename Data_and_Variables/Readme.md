@@ -26,9 +26,27 @@ the compiler and the resources it uses. Names beginning with a single underscore
 * The ASCII code is incorporated as a subset of Unicode, so U.S. Latin characters such as A and Z have the same representation under both systems.
 * Unicode assigns a number, called a code point, for each of its characters. The typical notation for Unicode code points looks like this: U-222B. The U identifies this as a Unicode character, and the 222B is the hexadecimal number for the character—an integral sign, in this case.
 * Characters can be signed or unsigned and depends on the usage. If we want to hold numerical values in a char variable we can define it to be signed or unsigned as per the range of desired values.
+* NOrmal characters are 8 bits, i.e., we can have 256 characters representations in decmal form ranging from 0 to 255. However as we continue to extend the base of the characters, more space is needed to represent them. Hence the type wchar_t was introduced.
 * wchar_t == wide character type. Used to represent the extended character set.
 * cin and cout family are not suitable for wchar_t types. The iostream header has wcin and wcout for handling wchar_t type.
 * Escape Sequences - \n, \a, \b, \t, \v etc
 * Single quotes - character constant, double quotes - part of string
+* As the character space continues to grow, wchar_t wasnt enough and char16_t and char32_t were introduced which are unsigned 16 and 32 bits respectively.
+* The 'u' prefix is used for char16 and 'U' for char32. char16 is typically of the form \u00F6 while char32 is of the form \U0000002B.
+
+### ___Constants___
+
+* Constants are declared and initialized using the const qualifier. Its called a qualifier as it qualifies the  meaning of a declaration.
+* Read only type and cannot be modified in the subsequent parts of the code.
+* Differences with the #define statement :
+ * Lets you specify the type explicitly
+ * Can use scoping to limit the definitions to certain files/functions
+ * Can use with other data types such as arrays/structures
+
+### ___Floating Points___
+
+* These values are stored in 2 parts - value and the scaling factor. The value stores the numbers disregarding the decimal point while the scaling factor stores the information for the decimal point in the form of a factor (e.g. 100 on a base of 10)
+* The scaling factor serves to move the decimal point, hence the name - floating point numbers.
+
 
 
