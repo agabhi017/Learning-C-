@@ -21,4 +21,14 @@ the compiler and the resources it uses. Names beginning with a single underscore
 * The manipulators "hex", "ct" can change the way cout displays integers. Use cout << maipulator_type; to change the notation of the integer type.
 * The cout.put() member function provides an alternative to using the << operator to display a character.
 
+### ___Characters___
+
+* The ASCII code is incorporated as a subset of Unicode, so U.S. Latin characters such as A and Z have the same representation under both systems.
+* Unicode assigns a number, called a code point, for each of its characters. The typical notation for Unicode code points looks like this: U-222B. The U identifies this as a Unicode character, and the 222B is the hexadecimal number for the character—an integral sign, in this case.
+* Characters can be signed or unsigned and depends on the usage. If we want to hold numerical values in a char variable we can define it to be signed or unsigned as per the range of desired values.
+* wchar_t == wide character type. Used to represent the extended character set.
+* cin and cout family are not suitable for wchar_t types. The iostream header has wcin and wcout for handling wchar_t type.
+* Escape Sequences - \n, \a, \b, \t, \v etc
+* Single quotes - character constant, double quotes - part of string
+
 
