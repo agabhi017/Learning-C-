@@ -47,6 +47,22 @@ the compiler and the resources it uses. Names beginning with a single underscore
 
 * These values are stored in 2 parts - value and the scaling factor. The value stores the numbers disregarding the decimal point while the scaling factor stores the information for the decimal point in the form of a factor (e.g. 100 on a base of 10)
 * The scaling factor serves to move the decimal point, hence the name - floating point numbers.
+* E notation guarantees that a number is stored in floating-point format, even if no decimal point is used. However, you can’t have spaces in the number, so, for
+example, 7.2 E6 is invalid.
+* three floating-point types: float, double, and long double
+* float is 32 bits, double is 64 bits, and long double is 80, 96, or 128 bits
+* Normally cout drops trailing zeros. For example, it would display 3333333.250000 as 3333333.25.The call to cout.setf() overrides that behavior. "cout.setf(ios_base::fixed, ios_base::floatfield)"
+* cout prints six figures to the right of the decimal
+* By default, floating-point constants such as 8.24 and 2.4E8 are type double. If you want a constant to be type float, you use an f or F suffix.
+* type float can represent only the first 6 or 7 digits in a number, so trying to change the 23rd digit has no effect on the value.
+
+### ___Arithmetic Operators___
+
+* the % operator works only with integers
+* When two operators have the same precedence, C++ looks at whether the operators have a left-to-right associativity or a right-to-left associativity.
+* Left-to-right associativity means that if two operators acting on the same operand have the same precedence, you apply the left-hand operator first. For right-to-left
+associativity, you apply the right-hand operator first.
+* The process of using the same symbol for more than one operation is called operator overloading.
 
 
 
