@@ -27,4 +27,6 @@ the usage of non-standard/user-defined objects/functions in the code and will th
 files (corresponding to `main.cpp` and `my_class.cpp`) and will then start executing the program.
 
 #### What happens when we try to include `my_class.cpp` into `main.cpp`?
-*
+* While compiling, the two object files corresponding to `main.cpp` and `my_class.cpp` will both have a definition of the same functions/classes.
+* In this case the Linker will be confused as to which function/class it has to link the code to. Hence, the definitions of functions/classes are always only defined once in
+the codebase to avoid such ambiguity and linking errors.
