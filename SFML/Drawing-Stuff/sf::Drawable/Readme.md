@@ -10,6 +10,7 @@
   * Rendering to a texture can be useful in situation such as :
     * pre-computing complex textures
     * applying post-effects to the screen, etc
+  * [`sf::RenderStates`](https://github.com/agabhi017/Learning-Cpp/tree/main/SFML/Drawing-Stuff/sf::RenderStates)
 * It is the base class for multiple commonly used classes such as `sf::Sprite`, `sf::Shape`, `sf::Text`, `sf::VertexBuffer` etc
 
 An example : (SFML documentation)
