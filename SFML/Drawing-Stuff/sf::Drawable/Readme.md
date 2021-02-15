@@ -13,6 +13,7 @@
   * [`sf::RenderStates`](https://github.com/agabhi017/Learning-Cpp/tree/main/SFML/Drawing-Stuff/sf::RenderStates)
 * It is the base class for multiple commonly used classes such as `sf::Sprite`, `sf::Shape`, `sf::Text`, `sf::VertexBuffer` etc
 
+
 An example : (SFML documentation)
 ```
 class MyDrawable : public sf::Drawable
@@ -37,3 +38,8 @@ private:
     sf::VertexArray m_vertices;
 };
 ```
+* Calling `window.draw(MyDrawable object)` will be executed in the following manner :
+  * Call to `sf::RenderTarget::draw` from the main game loop
+  * Call to `drawable.draw` from the definition of `sf::RenderTarget::draw`. This will call the virtual function in the user defined class 
+  dervied from the `sf::Drawable`
+  * Call to `sf::RenderTarget::draw(const Vertex* vertices, ..)` from the virtual function definition
