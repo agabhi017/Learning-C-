@@ -45,3 +45,5 @@ itertaion of the game loop.
 
 * To render a texture with a vertex array, pass the texture pointer separately as an argument in the `window.draw()` call or create an instance of `sf::RenderStates` 
 pass it as an attribute to the `window.draw()` after updating the texture member.
+* Similarly transformations can either be passed into `window.draw()` either as an `sf::Taansform` object or an `sf::RenderStates`
+
