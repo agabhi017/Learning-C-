@@ -37,3 +37,7 @@ static member functions.
 `this` pointer.
 * Static methods can only access static variables and do not have access to other non-static variables of the class.
 * Just like static variables, they are accessed using the namespace resolution of the class. We may choose to define static methods either inside or outside a class.
+* Some other facts about static methods:
+  * They cannot be virtual
+  * We cannot have overloading with the methods with the same name as that of static methods
+  * They cannot be declared as `const`, `volatile` or `const volatile` 
