@@ -19,5 +19,21 @@ declared as static in the external `cpp` file, the compiler will throw a linker 
 
 
 ### Static inside a class/struct definition
-* 
 
+* Static variables.membert functions are accessed by using the class name/scope and not through an object/class instantiation.
+
+#### Static Variables
+* Static variables inside a class/struct share a common memory across all the instances of that class.
+* Static variables are somewhat global variables inside a namespace and that namespace is the class.
+* For instance, if we would like to count the number of objects of a particular class, we can declare a static count variable and increment it in the constructor every time 
+the class is instantiated. In this way there will only be a single count variables across all the objects of that class and to access it we do not need an object to be able to access it.
+* These static variables need to be defined outside the class definition using the class's name resoultion. For example `myClass::static_variable_1`.
+* These can be both public as well as private. If they are public, they can be accessed directly using the namespace and inorder to access private static variables, we need 
+static member functions.
+
+#### Static methods/functions
+* Since private static variables cannot be accessed directly, static methods are required to access them.
+* Just like static variables, these methods are independent of the class instance and `they do not have access to a class instance`. That is, they do not have access to the 
+`this` pointer.
+* Static methods can only access static variables and do not have access to other non-static variables of the class.
+* Just like static variables, they are accessed using the namespace resolution of the class. We may choose to define static methods either inside or outside a class.
