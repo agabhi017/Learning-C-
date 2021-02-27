@@ -19,13 +19,13 @@
     ```
   * The return type of the function can be changed to return constant integers or constant pointers as discussed above
     ```
-    const int func() cont {
+    const int func() const {
       return attr; 
       //return a const int variable
     }
     ```
     ```
-    const int* const func() cont {
+    const int* const func() const {
       return attr;
       //returns a constant pointer to a const int data type
     }
