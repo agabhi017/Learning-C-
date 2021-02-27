@@ -1,6 +1,7 @@
 #Classes vs Structs
 
 ### Classes
+* Classes can be simply thought of as methods with a hidden parameter. The parameter being the instance of that class or the object.
 * Classes allow us to create custom data types by grouping variables/attributes and then adding functionalities(functions/methods) on top of them.
 * Classes do not actually help us achieve something which cannot be written otherwise. They are a functionality to make our code more organized syntactically and easy to follow.
 * By default the `visibility` of the variables and the methods inside the classes is private.
