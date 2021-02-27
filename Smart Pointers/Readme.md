@@ -18,3 +18,7 @@ memory and are deleted once the reference count drops to zero.
 itself which is called by the user and another one for the `ref count` called by the pointer. This is less efficient than allocating the combined memory together at one place. 
 * In case one does want an ownership of the object and does not want the shared pointer to increase the `ref count`, `weak` pointers can be used.
 * These are more of a reference in case when we only need a ref to an object and do not want to own it.
+
+A nice article on smart pointers vs `new` and `delete` :
+
+https://bromeon.ch/articles/raii.html
