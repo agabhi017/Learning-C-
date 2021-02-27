@@ -15,6 +15,35 @@ declared as static in the external `cpp` file, the compiler will throw a linker 
 
 
 ### Local Static
+* Two key things in the context of variables are its lifetime and the scope in which it can be used.
+* A variable can be declared as `static` inside a method (which can be inside or outisde the class).
+* Doing this will limit the scope of the variable to that function only as is the case with other variables
+* But, additionally, the `static` keyword will extend the leifetime of the variable and will be stored as long as the program runs. 
+* For instance, consider a simple program in which a variable is declared as static inside a function
+```
+void myFunction(){
+ static new_var = 0;
+ new_var += 5;
+ std::cout << new_var << std::endl;
+}
+
+int main(){
+ myFunction();
+ myFunction();
+ return 0;
+}
+```
+The output of the above program will be 
+```
+5
+10
+```
+If `new_var` wasnt a static variable the output have been instead:
+```
+5
+5
+```
+Just declaring the variable as static has increased its lifetime and at the same time its scope is limited tp the function inside of which it was declared.
 
 
 
