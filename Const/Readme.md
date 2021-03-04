@@ -12,19 +12,19 @@
 * Another place where `const` is used is with methods of a class. Consider the following examples :
   * The following code snippet sets the type of the `func` method as a constant, restricting it to modify the attributes of that class. NO variable can be modified inside the
   definition of the `func()` method.
-    ```
+    ```C++
     void func() const {
       std::cout << attr;
     }
     ```
   * The return type of the function can be changed to return constant integers or constant pointers as discussed above
-    ```
+    ```C++
     const int func() const {
       return attr; 
       //return a const int variable
     }
     ```
-    ```
+    ```C++
     const int* const func() const {
       return attr;
       //returns a constant pointer to a const int data type
@@ -34,7 +34,7 @@
   variable is passed by a constant reference in a method.
 * It should be noted that while accessing member functions using constant references, the function type should be constant as well. This helps to enusre that the
 said function does not modifies the object and hence the integrity of the constant reference is held.
-  ```
+  ```C++
   class a_class{
     int func() const{
       return attr;
