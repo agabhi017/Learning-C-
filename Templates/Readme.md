@@ -11,8 +11,8 @@ such as overloading a same function with different typenames (for example, a pri
 template<typename T, int Num>   // note that the semicolon is not used here which makes this a part of the next line
 class my_class(){
   private:
-    T my_arr[Num];   // using any other variable for sizing the array would result in a compile error as the stack needs to know 
-};                   // the size which it needs to allocate at the compile time
+    T my_arr[Num];   // using any other variable for sizing the array would result in a compile error as the stack needs  
+};                   // to know the size which it needs to allocate at the compile time
 
 int main(){
   my_class<int, 17> arr;
@@ -81,6 +81,9 @@ Non templated function: 10
 Specialized Template for int type: 10
 The main template fun(): 10.14
 ```
+
+### Template Metaprogramming
+[Read the details here](https://github.com/agabhi017/Learning-Cpp/tree/main/Templates/Template-Metaprogramming)
 
 ### Questions :
 * In the first codeblock the my_arr is private to the class. How are we able to access it directly from the main without any helper functions?
