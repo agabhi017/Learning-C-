@@ -27,6 +27,8 @@ integer array of size 17 as a private member.
 fine if the above templatized class definition had syntactical arrors but was never instatntiated by the user.
 * Each variation in the template arguments will create a separate definition at compile time. Hence, each of the definition will have their own copies of static members if
 declared. These static members will now belong to a templatized class with particular arguments.
+* Since these non type parameters to templates should be known to the compiler at compile time and cannot change their value, they rather act as a constant literal or 
+expression.
 
 ### Template Sepcialization and Preference order 
 
