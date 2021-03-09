@@ -11,3 +11,12 @@ enum my_enum{
 * By default, the first value in the enum is assigned the value 0 and then each value is incremented by one.
 * This behavior can be modified by assigning the values inside the ENUM definition directly. 
 * Since it is just an integer, we can access the variables a, b, and c outside the scope of enum as well (after proper name resolution).
+
+```C++
+enum Foo { a, b, c = 10, d, e = 1, f, g = f + c };
+//a = 0, b = 1, c = 10, d = 11, e = 1, f = 2, g = 12
+```
+
+### Scoped Enums
+
+### Unscoped Enums
