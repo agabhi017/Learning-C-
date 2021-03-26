@@ -1,4 +1,4 @@
-#Classes vs Structs
+# Classes vs Structs
 
 ### Classes
 * Classes can be simply thought of as methods with a hidden parameter. The parameter being the instance of that class or the object.
