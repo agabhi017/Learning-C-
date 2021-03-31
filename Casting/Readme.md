@@ -12,7 +12,10 @@ There are multiple types of casting supported in C++ :
       The usage of `(int)` is referred to as C-style casting
   * C++ style casting :
     * `static_cast  <typename>`
+      * ececuted at compile time 
     * `dynamic_cast <typename>`
+      * executed at run time hence comes with extra costs
+      * typically used for casting inherited classes into base classes or vice-versa 
     * `const_cast <typename>` (add/remove the const qualifier)
     * `reinterpret_cast <typename>` (re-interpret the given memory address as something else also known as `type punning`)
   * C-style casting is generally able to achieve whatever C++ style casting is able to achieve but the latter has added advantages over the other:
