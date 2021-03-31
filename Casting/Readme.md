@@ -14,7 +14,7 @@ There are multiple types of casting supported in C++ :
     * `static_cast  <typename>`
     * `dynamic_cast <typename>`
     * `const_cast <typename>` (add/remove the const qualifier)
-    * `reinterpret_cast <typename>` (re-interpret the given memory address as something else)
-  * C-style casting is genrally able to achieve whatever C++ style casting is able to achieve but the latter has added advantages over the other:
+    * `reinterpret_cast <typename>` (re-interpret the given memory address as something else also known as `type punning`)
+  * C-style casting is generally able to achieve whatever C++ style casting is able to achieve but the latter has added advantages over the other:
     * Added checks at compile time 
     * Easy to lookup instances of casting in the codebase thus facilitating debugging       
