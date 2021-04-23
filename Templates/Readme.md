@@ -83,6 +83,14 @@ Non templated function: 10
 Specialized Template for int type: 10
 The main template fun(): 10.14
 ```
+If the definition of the non-template function didnt exist, the compiler will try to deduce the type from the argument type and invoke the corresponding templatised function.
+The output would then look like:
+```
+The main template fun(): a
+Specialized Template for int type: 10
+Specialized Template for int type: 10
+The main template fun(): 10.14
+```
 
 ### Template Metaprogramming
 [Read the details here](https://github.com/agabhi017/Learning-Cpp/tree/main/Templates/Template-Metaprogramming)
