@@ -11,7 +11,7 @@ unsigned int factorial(unsigned int n) {
 ```
 
 The same can be achieved using metaprogramming :
-``` C+++
+``` C++
 template <unsigned int n>
 struct factorial {
 	enum { value = n * factorial<n - 1>::value };
