@@ -20,7 +20,7 @@ declared as static in the external `cpp` file, the compiler will throw a linker 
 * Doing this will limit the scope of the variable to that function only as is the case with other variables
 * But, additionally, the `static` keyword will extend the leifetime of the variable and will be stored as long as the program runs. 
 * For instance, consider a simple program in which a variable is declared as static inside a function
-```
+```C++
 void myFunction(){
  static new_var = 0;
  new_var += 5;
@@ -49,7 +49,7 @@ Just declaring the variable as static has increased its lifetime and at the same
 
 ### Static inside a class/struct definition
 
-* Static variables.membert functions are accessed by using the class name/scope and not through an object/class instantiation.
+* Static variables/member functions are accessed by using the class name/scope and not through an object/class instantiation.
 
 #### Static Variables
 * Static variables inside a class/struct share a common memory across all the instances of that class.
@@ -65,7 +65,7 @@ static member functions.
 * Just like static variables, these methods are independent of the class instance and `they do not have access to a class instance`. That is, they do not have access to the 
 `this` pointer.
 * Static methods can only access static variables and do not have access to other non-static variables of the class.
-* Just like static variables, they are accessed using the namespace resolution of the class. We may choose to define static methods either inside or outside a class.
+* Just like static variables, they are accessed using the namespace resolution of the class. **We may choose to define static methods either inside or outside a class.**
 * Some other facts about static methods:
   * They cannot be virtual
   * We cannot have overloading with the methods with the same name as that of static methods
