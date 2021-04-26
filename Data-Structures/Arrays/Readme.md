@@ -93,3 +93,10 @@ sizeof ***arr == 4 bytes                     //integer
 * Once an array is passed as a pointer in the decayed form to a function, there is no way for a function to determine the size of the original array. To retrieve the size, an additional parameter has to be passed to the function. If we try to use the `sizeof` operator we will only get the size a pointer occupies in the memory. A properly designed compiler should throw a warning if we try to use `sizeof` on the array passed into a function.
 * The arrays passed in the functions can be modified as a pointer is passed. We can use subscripting syntax or pointer arithmetic to access the elements of the array. If we do not want to modify the array, pass it using a `const` qualifier instead.
 * There are 2 ways in which we can pass an array to a function:
+```C++
+void func(int* array);
+void func(int array[]);
+
+void func(int array[][]);     //not allowed as we can only get away with not specifying one of the dimensions at maximum
+void func(int array[][5]);    //allowed
+```
