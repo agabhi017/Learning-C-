@@ -76,9 +76,8 @@ bool isVowel(char c)
 }
 ```
 In the above example, if any of the case matches, the execution will continue until the last case and return true and since each of the previous cases do not have any statements we do get the intended result. This is not considered to be a fallthrough behavior, rather its stacking of different case lables.
-* `Variable declaration and initialization`: We can declare (but not initialize) variables inside a switch both before and after case labels. Variables defined in once case can be used in later cases even if that case is not executed. This is because, declaring variables direct the compiler that a variable is created in that scope but initilaiznf 
-* The individual cases are not tightly scoped, that is the cases share the same scope unless any of them is explicitly scoped using braces. In such case, the variables deifned inside that scope will not be available to other case blocks.
-* 
+* `Variable declaration and initialization`: We can declare (but not initialize) variables inside a switch both before and after case labels. Variables defined in one case can be used in later cases even if that case is not executed. This is because, declaring variables directs the compiler that a variable is created in that scope but initilaizng a variable will throw a compile error as initialization requires execution which could be skipped depending on which condidtions are executed. 
+* The individual cases are not tightly scoped, that is the cases share the same scope unless any of them is explicitly scoped using braces. In such case, the variables deifned inside that scope will not be available to other case blocks. This explicit scoping allows initializing variables inside that scope.
 
 
 
