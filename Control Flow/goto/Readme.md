@@ -21,3 +21,25 @@ tryAgain: // this is a statement label
 }
 ```
 * In most cases, this should be avoided at all costs unless there is no cleaner alternative way of achieveing the same thing.
+* Another example is:
+```C++
+int main(){
+    test:
+        cout << "repitition" << endl;
+
+    cout << "Hello" << endl;
+    goto test;
+    return 0;
+}
+```
+This will result in an infinte loop printing "Hello" and "repitition" alternately and the foollowing code will indefinitely print "Hello"
+```C++
+int main(){
+    test:
+        ;
+
+    cout << "Hello" << endl;
+    goto test;
+    return 0;
+}
+```
